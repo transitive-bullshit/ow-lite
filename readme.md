@@ -14,8 +14,11 @@ npm install --save ow-lite
 
 `ow-lite` supports 98% of practical `ow` usage that I've seen, but is **30x smaller**, which is really important for **browser usage**.
 
-`ow@0.5.0` weighs in at 119.61kb (65.95kb minified, 17.58kb gzipped)
-`ow-lite` weighs in at 6kb (2.2kb minified, 903b gzipped)
+| Library        | Size      | Minified | GZip    |
+|:---------------|:----------|:---------|:--------|
+| `ow@0.5.0`     | 119.61kb  | 65.95kb  | 17.58kb |
+| `ow-lite`      | 6kb       | 2.2kb    | 903b    |
+
 
 `ow-lite` has the following drawbacks:
 
@@ -24,9 +27,7 @@ npm install --save ow-lite
 
 ## Usage
 
-You may use `ow-lite` as a drop-in replacement for `ow`.
-
-`ow-lite` supports the following predicate types:
+You may use `ow-lite` as a mostly drop-in replacement for `ow`. It supports the following types:
 
 - number
 - string
