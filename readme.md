@@ -12,7 +12,7 @@ npm install --save ow-lite
 
 ## Why
 
-`ow-lite` supports 98% of practical `ow` usage and is **30x smaller**, which is really important for **browser usage**.
+`ow-lite` supports the most practical `ow` usage and is **30x smaller**, which is really important for **browser usage**.
 
 | Library        | Size      | Minified | GZip    |
 |:---------------|:----------|:---------|:--------|
