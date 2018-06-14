@@ -19,7 +19,6 @@ npm install --save ow-lite
 | `ow@0.5.0`     | 119.61kb  | 65.95kb  | 17.58kb |
 | `ow-lite`      | 6kb       | 2.2kb    | 903b    |
 
-
 `ow-lite` has the following drawbacks:
 
 - less verbose error messages

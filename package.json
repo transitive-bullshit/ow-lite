@@ -2,11 +2,13 @@
   "name": "ow-lite",
   "version": "0.0.2",
   "description": "Lightweight replacement for the ow validation library meant for browser usage.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "transitive-bullshit/ow-lite",
   "author": "Travis Fischer <travis@automagical.ai>",
   "license": "MIT",
   "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
     "test": "ava -v && standard"
   },
   "engines": {
@@ -20,12 +22,35 @@
   ],
   "devDependencies": {
     "ava": "^0.25.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
     "esm": "^3.0.49",
+    "rollup": "^0.60.6",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
     "standard": "^11.0.0"
   },
+  "files": [
+    "dist"
+  ],
   "ava": {
     "require": [
       "esm"
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ]
+    ],
+    "plugins": [
+      "external-helpers"
     ]
   }
 }

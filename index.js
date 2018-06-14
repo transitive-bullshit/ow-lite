@@ -1,14 +1,12 @@
-'use strict'
+import symbols from './lib/symbols'
 
-const symbols = require('./lib/symbols')
-
-const array = require('./lib/predicates/array')
-const boolean = require('./lib/predicates/boolean')
-const date = require('./lib/predicates/date')
-const func = require('./lib/predicates/function')
-const number = require('./lib/predicates/number')
-const object = require('./lib/predicates/object')
-const string = require('./lib/predicates/string')
+import array from './lib/predicates/array'
+import boolean from './lib/predicates/boolean'
+import date from './lib/predicates/date'
+import func from './lib/predicates/function'
+import number from './lib/predicates/number'
+import object from './lib/predicates/object'
+import string from './lib/predicates/string'
 
 const typePredicates = {
   array,
@@ -115,4 +113,4 @@ const createOw = ({
   return ow
 }
 
-module.exports = createOw()
+export default createOw()
