@@ -1,6 +1,6 @@
 {
   "name": "ow-lite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Lightweight replacement for the ow validation library meant for browser usage.",
   "main": "index.js",
   "repository": "transitive-bullshit/ow-lite",
