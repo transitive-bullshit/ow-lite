@@ -1,14 +1,23 @@
 'use strict'
 
 const symbols = require('./lib/symbols')
-const number = require('./lib/number')
-const string = require('./lib/string')
-const object = require('./lib/object')
+
+const array = require('./lib/predicates/array')
+const boolean = require('./lib/predicates/boolean')
+const date = require('./lib/predicates/date')
+const func = require('./lib/predicates/function')
+const number = require('./lib/predicates/number')
+const object = require('./lib/predicates/object')
+const string = require('./lib/predicates/string')
 
 const typePredicates = {
+  array,
+  boolean,
+  date,
+  function: func,
   number,
-  string,
-  object
+  object,
+  string
 }
 
 const createOw = ({
@@ -39,6 +48,10 @@ const createOw = ({
         }
       }
 
+      if (!predicates) {
+        throw new Error(`Unknown \`${type}\` predicate \`${key}\``)
+      }
+
       const predicate = predicates[key]
 
       if (predicate) {
@@ -58,7 +71,7 @@ const createOw = ({
                 fn: predicate.validator
               }
             ],
-            predicates: predicate.predicates
+            predicates: predicate.predicates || null
           })
         }
       } else {
