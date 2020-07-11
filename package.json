@@ -52,5 +52,9 @@
     "plugins": [
       "external-helpers"
     ]
+  },
+  "dependencies": {
+    "eslint-config-standard": "^14.1.0",
+    "global": "^4.4.0"
   }
 }
